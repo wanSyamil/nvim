@@ -1,1 +1,1 @@
-require("wansyamilvim")
+require("vim")
