@@ -1,13 +1,12 @@
 return {
-    { "folke/lazy.nvim" },
-    { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require("config.rosepine")
-        end,
+  { "folke/lazy.nvim" },
+  { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  {
+    "ricardoramirezr/blade-nav.nvim",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
     },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000, enabled = false }
+    ft = { "blade", "php" },
+  },
 }
