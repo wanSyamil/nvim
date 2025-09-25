@@ -20,10 +20,21 @@ vim.keymap.set("x", "p", '"_dP', { desc = "[P]ut without yanking" })
 local harpoon = require("harpoon")
 harpoon:setup()
 
-vim.keymap.set("n", "<A-1>", function() harpoon:list():select(1) end, { desc = "Harpoon File 1" })
-vim.keymap.set("n", "<A-2>", function() harpoon:list():select(2) end, { desc = "Harpoon File 2" })
-vim.keymap.set("n", "<A-3>", function() harpoon:list():select(3) end, { desc = "Harpoon File 3" })
-vim.keymap.set("n", "<A-4>", function() harpoon:list():select(4) end, { desc = "Harpoon File 4" })
+vim.keymap.set("n", "<A-1>", function()
+  harpoon:list():select(1)
+end, { desc = "Harpoon File 1" })
+vim.keymap.set("n", "<A-2>", function()
+  harpoon:list():select(2)
+end, { desc = "Harpoon File 2" })
+vim.keymap.set("n", "<A-3>", function()
+  harpoon:list():select(3)
+end, { desc = "Harpoon File 3" })
+vim.keymap.set("n", "<A-4>", function()
+  harpoon:list():select(4)
+end, { desc = "Harpoon File 4" })
+vim.keymap.set("n", "<A-5>", function()
+  harpoon:list():select(5)
+end, { desc = "Harpoon File 5" })
 
 vim.keymap.del("n", "<leader>1")
 vim.keymap.del("n", "<leader>2")
@@ -34,3 +45,14 @@ vim.keymap.del("n", "<leader>6")
 vim.keymap.del("n", "<leader>7")
 vim.keymap.del("n", "<leader>8")
 vim.keymap.del("n", "<leader>9")
+vim.keymap.del("n", "<C-s>")
+
+vim.keymap.set("n", "<leader>um", function()
+  if vim.opt.mouse:get() == "" then
+    vim.opt.mouse = "a"
+    vim.notify("Mouse enabled", vim.log.levels.INFO)
+  else
+    vim.opt.mouse = ""
+    vim.notify("Mouse disabled", vim.log.levels.WARN)
+  end
+end, { desc = "Toggle Mouse" })
