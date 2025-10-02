@@ -36,6 +36,18 @@ vim.keymap.set("n", "<A-5>", function()
   harpoon:list():select(5)
 end, { desc = "Harpoon File 5" })
 
+vim.keymap.set("n", "<leader>um", function()
+  local mouse_setting = vim.o.mouse
+
+  if mouse_setting == "a" then
+    vim.o.mouse = ""
+    vim.notify("Mouse disabled", vim.log.levels.WARN)
+  else
+    vim.o.mouse = "a"
+    vim.notify("Mouse enabled", vim.log.levels.INFO)
+  end
+end, { desc = "Toggle Mouse" })
+
 vim.keymap.del("n", "<leader>1")
 vim.keymap.del("n", "<leader>2")
 vim.keymap.del("n", "<leader>3")
@@ -46,13 +58,5 @@ vim.keymap.del("n", "<leader>7")
 vim.keymap.del("n", "<leader>8")
 vim.keymap.del("n", "<leader>9")
 vim.keymap.del("n", "<C-s>")
-
-vim.keymap.set("n", "<leader>um", function()
-  if vim.opt.mouse:get() == "" then
-    vim.opt.mouse = "a"
-    vim.notify("Mouse enabled", vim.log.levels.INFO)
-  else
-    vim.opt.mouse = ""
-    vim.notify("Mouse disabled", vim.log.levels.WARN)
-  end
-end, { desc = "Toggle Mouse" })
+vim.keymap.del("n", "L")
+vim.keymap.del("n", "K")
