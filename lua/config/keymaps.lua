@@ -35,7 +35,24 @@ end, { desc = "Harpoon File 4" })
 vim.keymap.set("n", "<A-5>", function()
   harpoon:list():select(5)
 end, { desc = "Harpoon File 5" })
+vim.keymap.set("n", "<A-6>", function()
+  harpoon:list():select(6)
+end, { desc = "Harpoon File 6" })
+vim.keymap.set("n", "<A-7>", function()
+  harpoon:list():select(7)
+end, { desc = "Harpoon File 7" })
+vim.keymap.set("n", "<A-8>", function()
+  harpoon:list():select(8)
+end, { desc = "Harpoon File 8" })
+vim.keymap.set("n", "<A-9>", function()
+  harpoon:list():select(9)
+end, { desc = "Harpoon File 9" })
 
+-- Dadbod keymaps
+vim.keymap.set("n", "<leader>db", "<cmd>DBUIToggle<CR>", { desc = "Toggle Dadbod UI" })
+vim.keymap.set("v", "<CR>", ":DB<CR>", { desc = "Run selected SQL query (Dadbod)" })
+
+-- Toggle mouse
 vim.keymap.set("n", "<leader>um", function()
   local mouse_setting = vim.o.mouse
 
