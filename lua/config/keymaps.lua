@@ -2,7 +2,19 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- disabled keymaps
+vim.keymap.del("n", "<leader>1")
+vim.keymap.del("n", "<leader>2")
+vim.keymap.del("n", "<leader>3")
+vim.keymap.del("n", "<leader>4")
+vim.keymap.del("n", "<leader>5")
+vim.keymap.del("n", "<leader>6")
+vim.keymap.del("n", "<leader>7")
+vim.keymap.del("n", "<leader>8")
+vim.keymap.del("n", "<leader>9")
+vim.keymap.del("n", "<C-s>")
+vim.keymap.del("n", "L")
+vim.keymap.del("n", "H")
+vim.keymap.set({ "n", "v" }, "q", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-z>", "<Nop>")
 
 -- Normal + Visual delete/change go to black hole register
@@ -49,7 +61,7 @@ vim.keymap.set("n", "<A-9>", function()
 end, { desc = "Harpoon File 9" })
 
 -- Dadbod keymaps
-vim.keymap.set("n", "<leader>db", "<cmd>DBUIToggle<CR>", { desc = "Toggle Dadbod UI" })
+vim.keymap.set("n", "<leader>d", "<cmd>DBUIToggle<CR>", { desc = "Toggle Dadbod UI" })
 vim.keymap.set("v", "<CR>", ":DB<CR>", { desc = "Run selected SQL query (Dadbod)" })
 
 -- Toggle mouse
@@ -64,17 +76,3 @@ vim.keymap.set("n", "<leader>um", function()
     vim.notify("Mouse enabled", vim.log.levels.INFO)
   end
 end, { desc = "Toggle Mouse" })
-
-vim.keymap.del("n", "<leader>1")
-vim.keymap.del("n", "<leader>2")
-vim.keymap.del("n", "<leader>3")
-vim.keymap.del("n", "<leader>4")
-vim.keymap.del("n", "<leader>5")
-vim.keymap.del("n", "<leader>6")
-vim.keymap.del("n", "<leader>7")
-vim.keymap.del("n", "<leader>8")
-vim.keymap.del("n", "<leader>9")
-vim.keymap.del("n", "<C-s>")
-vim.keymap.del("n", "L")
-vim.keymap.del("n", "H")
-vim.keymap.set({ "n", "v" }, "q", "<Nop>", { noremap = true, silent = true })
