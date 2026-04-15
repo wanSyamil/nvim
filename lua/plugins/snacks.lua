@@ -67,12 +67,6 @@ return {
         },
       },
     },
-    -- picker= {
-    --   sources = {
-    --     explorer = {
-    --       layout = "right", -- This makes explorer open on the right
-    --     },
-    --   },
-    -- },
+    -- picker = { sources = { explorer = { layout = "right" } } },
   },
 }
