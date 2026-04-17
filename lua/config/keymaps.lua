@@ -76,3 +76,6 @@ vim.keymap.set("n", "<leader>um", function()
     vim.notify("Mouse enabled", vim.log.levels.INFO)
   end
 end, { desc = "Toggle Mouse" })
+
+-- Text case conversion (g-prefix)
+vim.keymap.set({ "n", "x" }, "<leader>.", "<cmd>TextCaseOpenTelescope<CR>", { desc = "Text Case Picker" })
