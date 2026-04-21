@@ -13,5 +13,6 @@
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 sudo dnf install lazygit
 - install inteliphense (lsp) through :Mason
+- Install php and blade linter through :TSInstall
 - ~enable php through :LazyExtra~ buggy
 - composer install (Laravel project require this for LSP to work)
