@@ -16,3 +16,4 @@ sudo dnf install lazygit
 - Install php and blade linter through :TSInstall
 - ~enable php through :LazyExtra~ buggy
 - composer install (Laravel project require this for LSP to work)
+- sudo apt install fd-find
