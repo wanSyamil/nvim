@@ -1,3 +1,13 @@
+local function whitespace_flexible_grep(opts, ctx)
+  if ctx.filter.search ~= "" then
+    ctx = ctx:clone(opts)
+    ctx.filter = ctx.filter:clone()
+    ctx.filter.search = ctx.filter.search:gsub("%s+", [[\s*]])
+  end
+
+  return require("snacks.picker.source.grep").grep(opts, ctx)
+end
+
 return {
   "snacks.nvim",
   opts = {
@@ -67,6 +77,15 @@ return {
         },
       },
     },
-    -- picker = { sources = { explorer = { layout = "right" } } },
+    picker = {
+      sources = {
+        grep = {
+          finder = whitespace_flexible_grep,
+          args = {
+            "--pcre2",
+          },
+        },
+      },
+    },
   },
 }
